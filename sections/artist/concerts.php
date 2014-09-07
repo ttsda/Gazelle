@@ -21,6 +21,8 @@ if ($ArtistEvents === false) { // Something went wrong
 	echo '</ul>';
 }
 $Concerts .= ob_get_clean();
+
+if isset($ArtistEvents['events']['event']) {
 ?>
 
 <div class="box">
@@ -32,6 +34,8 @@ $Concerts .= ob_get_clean();
 	<?=$Concerts?>
 	</div>
 </div>
+
+<?}?>
 
 <?
 function make_concert_link($Event) {
